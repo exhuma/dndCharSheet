@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_height="match_parent"
+	android:layout_width="match_parent">
+	<fragment android:name="lu.albert.android.dndcharsheet.InfoSections"
+		android:id="@+id/sections" android:layout_height="match_parent" android:layout_width="200px"></fragment>
+	<FrameLayout
+		android:layout_width="0px"
+		android:layout_height="match_parent"
+		android:layout_weight="1" android:id="@+id/details"></FrameLayout>
+</LinearLayout>
