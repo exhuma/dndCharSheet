@@ -2,6 +2,7 @@ package lu.albert.android.dndcharsheet.fragment;
 
 import lu.albert.android.dndcharsheet.DndCharsheetActivity;
 import lu.albert.android.dndcharsheet.R;
+import lu.albert.android.dndcharsheet.util.WeaponAdapter;
 import lu.albert.d20character.api.Character;
 import lu.albert.d20character.api.Character.DamageType;
 import android.app.Fragment;
@@ -14,10 +15,14 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Dashboard extends Fragment {
+
+	// TODO this could be moved to the settings
+	private static final String SPEED_UNIT = "ft";
 
 	DndCharsheetActivity mMainActivity;
 	Character mChar;
@@ -49,6 +54,10 @@ public class Dashboard extends Fragment {
 	private EditText mEddTmpWillSave;
 	private EditText mEddTmpReflexSave;
 	private EditText mEddTmpFortSave;
+	private TextView mDamageReduction;
+	private TextView mTxtSpeed;
+
+	private ListView mLstWeapons;
 
 	public static Dashboard newInstance() {
 		Dashboard f = new Dashboard();
@@ -76,6 +85,8 @@ public class Dashboard extends Fragment {
 		mNonlethal = (EditText) getActivity().findViewById(
 				R.id.edtNonlethalDamage);
 		mArmorClass = (TextView) getActivity().findViewById(R.id.txtAC);
+		mDamageReduction = (TextView) getActivity().findViewById(
+				R.id.txtDamageReduction);
 		mArmorClassTouch = (TextView) getActivity().findViewById(
 				R.id.txtTouchAC);
 		mArmorClassFF = (TextView) getActivity().findViewById(R.id.txtFFAc);
@@ -118,6 +129,8 @@ public class Dashboard extends Fragment {
 				.findViewById(R.id.edtTempReflex);
 		mEddTmpWillSave = (EditText) mMainActivity
 				.findViewById(R.id.edtTempWill);
+		mTxtSpeed = (TextView) mMainActivity.findViewById(R.id.txtSpeed);
+		mLstWeapons = (ListView) mMainActivity.findViewById(R.id.lstWeapons);
 
 		updateValues();
 
@@ -351,6 +364,9 @@ public class Dashboard extends Fragment {
 		mTxtFortSave.setText(String.format("%+d", mChar.getFortitudeSave()));
 		mTxtReflexSave.setText(String.format("%+d", mChar.getReflexSave()));
 		mTxtWillSave.setText(String.format("%+d", mChar.getWillSave()));
+		mDamageReduction.setText(mChar.getDamageReduction());
+		mTxtSpeed.setText(String.format("%d%s", mChar.getSpeed(), SPEED_UNIT));
+		mLstWeapons.setAdapter(new WeaponAdapter(mMainActivity, mChar));
 	}
 
 }

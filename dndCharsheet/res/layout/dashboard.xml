@@ -6,13 +6,9 @@
   android:layout_height="match_parent">
     <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center" android:text="@string/alpha_warning" android:textColor="#ffff00"></TextView>
     <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="1">
-        <LinearLayout android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:orientation="vertical" android:layout_height="match_parent" android:paddingLeft="5dp" android:paddingRight="5dp">
+        <LinearLayout android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:orientation="vertical" android:layout_height="match_parent" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_weight="0.5">
             <TextView android:layout_width="match_parent" android:id="@+id/textView2" android:layout_height="wrap_content" android:text="@string/quick_stats" android:gravity="center" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
             <TableLayout android:id="@+id/tableLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                <TableRow android:id="@+id/tableRow6" android:layout_height="wrap_content" android:layout_width="wrap_content">
-                    <TextView android:id="@+id/lblInitiative" android:layout_width="wrap_content" android:text="@string/initiative" android:layout_height="wrap_content"></TextView>
-                    <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="right" android:id="@+id/txtInitiative" android:layout_width="wrap_content" android:text="@string/unknown" android:layout_height="wrap_content"></TextView>
-                </TableRow>
                 <TableRow android:id="@+id/tableRow1" android:layout_height="wrap_content" android:layout_width="wrap_content">
                     <TextView android:id="@+id/lblHp" android:layout_width="wrap_content" android:text="@string/hitpoints" android:layout_height="wrap_content"></TextView>
                     <EditText android:gravity="right" android:layout_width="wrap_content" android:inputType="numberSigned" android:id="@+id/edtHp" android:layout_height="wrap_content">
@@ -42,21 +38,9 @@
                     <Button android:text="@string/plus5" android:id="@+id/btnNonlethalDamagePlus5" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
                     <Button android:text="@string/heal_all" android:id="@+id/btnHealAllNonlethal" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
                 </TableRow>
-                <TableRow android:id="@+id/tableRow3" android:layout_height="wrap_content" android:layout_width="wrap_content">
-                    <TextView android:id="@+id/lblAC" android:layout_width="wrap_content" android:text="@string/armor_class" android:layout_height="wrap_content"></TextView>
-                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right" android:id="@+id/txtAC" android:layout_width="wrap_content" android:text="@string/unknown" android:layout_height="wrap_content"></TextView>
-                </TableRow>
-                <TableRow android:id="@+id/tableRow4" android:layout_height="wrap_content" android:layout_width="wrap_content">
-                    <TextView android:id="@+id/lblTouchAC" android:layout_width="wrap_content" android:text="@string/touch_armor_class" android:layout_height="wrap_content"></TextView>
-                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right" android:id="@+id/txtTouchAC" android:layout_width="wrap_content" android:text="@string/unknown" android:layout_height="wrap_content"></TextView>
-                </TableRow>
-                <TableRow android:id="@+id/tableRow5" android:layout_height="wrap_content" android:layout_width="wrap_content">
-                    <TextView android:id="@+id/lblFFAc" android:layout_width="wrap_content" android:text="@string/flat_footed_ac" android:layout_height="wrap_content"></TextView>
-                    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="right" android:id="@+id/txtFFAc" android:layout_width="wrap_content" android:text="@string/unknown" android:layout_height="wrap_content"></TextView>
-                </TableRow>
             </TableLayout>
         </LinearLayout>
-        <LinearLayout android:id="@+id/linearLayout3" android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_weight="0.22">
+        <LinearLayout android:id="@+id/linearLayout3" android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_weight="0.5">
             <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center" android:id="@+id/lblSavingThrows" android:layout_width="wrap_content" android:text="@string/saving_throws" android:layout_height="wrap_content"></TextView>
             <TableLayout android:id="@+id/tableLayout2" android:layout_height="match_parent" android:layout_width="match_parent">
                 <TableRow android:id="@+id/tableRow8" android:layout_height="wrap_content" android:layout_width="wrap_content">
@@ -76,6 +60,38 @@
                 </TableRow>
             </TableLayout>
         </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout4" android:layout_height="wrap_content" android:layout_width="match_parent" android:weightSum="1" android:layout_marginTop="10dp">
+        <TableLayout android:layout_weight="0.5" android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/tableLayout3">
+            <TableRow android:id="@+id/tableRow6" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <TextView android:text="@string/initiative" android:id="@+id/lblInitiative" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/unknown" android:id="@+id/txtInitiative" android:gravity="right" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            </TableRow>
+            <TableRow android:id="@+id/tableRow3" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <TextView android:text="@string/armor_class" android:id="@+id/lblAC" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/unknown" android:id="@+id/txtAC" android:gravity="right" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            </TableRow>
+            <TableRow android:id="@+id/tableRow4" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <TextView android:text="@string/touch_armor_class" android:id="@+id/lblTouchAC" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/unknown" android:id="@+id/txtTouchAC" android:gravity="right" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            </TableRow>
+            <TableRow android:id="@+id/tableRow5" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <TextView android:text="@string/flat_footed_ac" android:id="@+id/lblFFAc" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/unknown" android:id="@+id/txtFFAc" android:gravity="right" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            </TableRow>
+            <TableRow android:id="@+id/tableRow9" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <TextView android:text="@string/damage_reduction" android:id="@+id/textView4" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/unknown" android:id="@+id/txtDamageReduction" android:gravity="right" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            </TableRow>
+            <TableRow android:id="@+id/TableRow03" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <TextView android:text="@string/speed" android:id="@+id/TextView02" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/unknown" android:id="@+id/txtSpeed" android:gravity="right" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout5" android:layout_height="match_parent" android:layout_width="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginTop="10dp">
+        <TextView android:layout_height="wrap_content" android:id="@+id/textView5" android:layout_weight="1" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:text="@string/weapons"></TextView>
+        <ListView android:layout_weight="1" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/lstWeapons"></ListView>
     </LinearLayout>
     
 </LinearLayout>

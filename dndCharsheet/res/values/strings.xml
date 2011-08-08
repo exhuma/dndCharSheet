@@ -35,4 +35,14 @@
     <string name="fortitude">Fortitude</string>
     <string name="reflex">Reflex</string>
     <string name="will">Will</string>
+    <string name="damage_reduction">Damage Reduction</string>
+    <string name="speed">Speed</string>
+    <string name="weapons">Weapons</string>
+    <string name="attack">Attack</string>
+    <string name="attack_bonus">Attack Bonus</string>
+    <string name="damage">Damage</string>
+    <string name="critical">Critical</string>
+    <string name="range">Range</string>
+    <string name="type">Type</string>
+    <string name="notes">Notes</string>
 </resources>
