@@ -14,14 +14,13 @@ import android.widget.Toast;
 public class InfoSections extends ListFragment {
 
 	private final static String[] SECTIONS = new String[] { "Dashboard",
-			"Skills", "Encounter", "Inventory", "Spells", "Character Details" };
+			"Skills", "Inventory", "Spells", "Character Details" };
 
 	public static final int IDX_DASHBOARD = 0;
 	public static final int IDX_SKILLS = 1;
-	public static final int IDX_ENCOUNTER = 2;
-	public static final int IDX_INVENTORY = 3;
-	public static final int IDX_SPELLS = 4;
-	public static final int IDX_DETAILS = 5;
+	public static final int IDX_INVENTORY = 2;
+	public static final int IDX_SPELLS = 3;
+	public static final int IDX_DETAILS = 4;
 
 	public static final String STATE_CURRENT_SECTION = "currentSection";
 
