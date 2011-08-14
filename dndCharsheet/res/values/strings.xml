@@ -45,4 +45,11 @@
     <string name="range">Range</string>
     <string name="type">Type</string>
     <string name="notes">Notes</string>
+    <string name="weapon">Weapon</string>
+    <string name="armor">Armor/Protective Item</string>
+    <string name="armor_rating">Armor Rating</string>
+    <string name="check_penalty">Check Penalty</string>
+    <string name="max_dex">Max Dex</string>
+    <string name="spell_failure">Spell Failure</string>
+    <string name="weight">Weight</string>
 </resources>

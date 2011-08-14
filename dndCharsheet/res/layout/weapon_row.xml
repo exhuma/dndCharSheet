@@ -6,13 +6,13 @@
   android:layout_height="match_parent">
     <TableLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/tableLayout1">
         <TableRow android:id="@+id/tableRow1" android:layout_height="wrap_content" android:layout_width="match_parent">
-            <TextView android:text="@string/attack" android:id="@+id/textView1" android:layout_height="wrap_content" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:layout_width="match_parent"></TextView>
+            <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:layout_width="match_parent" android:text="@string/weapon"></TextView>
             <TextView android:text="@string/attack_bonus" android:id="@+id/textView2" android:layout_height="wrap_content" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:layout_width="match_parent"></TextView>
             <TextView android:id="@+id/textView3" android:layout_height="wrap_content" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:text="@string/damage" android:layout_width="match_parent"></TextView>
             <TextView android:layout_height="wrap_content" android:id="@+id/textView4" android:text="@string/critical" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:layout_width="match_parent"></TextView>
         </TableRow>
         <TableRow android:id="@+id/tableRow1" android:layout_height="wrap_content" android:layout_width="match_parent">
-            <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:id="@+id/txtAttack" android:layout_width="match_parent"></TextView>
+            <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:id="@+id/txtWeaponName"></TextView>
             <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:id="@+id/txtAttackBonus" android:layout_width="match_parent"></TextView>
             <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:id="@+id/txtDamage" android:layout_width="match_parent"></TextView>
             <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:id="@+id/txtCritical" android:layout_width="match_parent"></TextView>

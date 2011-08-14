@@ -2,6 +2,7 @@ package lu.albert.android.dndcharsheet.fragment;
 
 import lu.albert.android.dndcharsheet.DndCharsheetActivity;
 import lu.albert.android.dndcharsheet.R;
+import lu.albert.android.dndcharsheet.util.ArmorAdapter;
 import lu.albert.android.dndcharsheet.util.WeaponAdapter;
 import lu.albert.d20character.api.Character;
 import lu.albert.d20character.api.Character.DamageType;
@@ -58,6 +59,7 @@ public class Dashboard extends Fragment {
 	private TextView mTxtSpeed;
 
 	private ListView mLstWeapons;
+	private ListView mLstArmor;
 
 	public static Dashboard newInstance() {
 		Dashboard f = new Dashboard();
@@ -131,6 +133,7 @@ public class Dashboard extends Fragment {
 				.findViewById(R.id.edtTempWill);
 		mTxtSpeed = (TextView) mMainActivity.findViewById(R.id.txtSpeed);
 		mLstWeapons = (ListView) mMainActivity.findViewById(R.id.lstWeapons);
+		mLstArmor = (ListView) mMainActivity.findViewById(R.id.lstArmor);
 
 		updateValues();
 
@@ -367,6 +370,7 @@ public class Dashboard extends Fragment {
 		mDamageReduction.setText(mChar.getDamageReduction());
 		mTxtSpeed.setText(String.format("%d%s", mChar.getSpeed(), SPEED_UNIT));
 		mLstWeapons.setAdapter(new WeaponAdapter(mMainActivity, mChar));
+		mLstArmor.setAdapter(new ArmorAdapter(mMainActivity, mChar));
 	}
 
 }

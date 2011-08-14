@@ -9,12 +9,12 @@ import android.app.Activity;
 import android.os.Bundle;
 
 public class DndCharsheetActivity extends Activity {
-	
+
 	public static final String TAG = "DND_CHARSHEET";
 	public static String ARG_INDEX = "index";
 	private Character loadedCharacter;
-	
-    public DndCharsheetActivity() {
+
+	public DndCharsheetActivity() {
 		super();
 		this.loadedCharacter = new CharacterImpl();
 		this.loadedCharacter.setStrength(16);
@@ -26,30 +26,42 @@ public class DndCharsheetActivity extends Activity {
 		this.loadedCharacter.setHitPoints(32);
 		this.loadedCharacter.setName("Hardcoded test character");
 		this.loadedCharacter.getArmor().add(
-				new ProtectiveItemImpl("foo", 6, 1, -6, 30));
+				new ProtectiveItemImpl("foo", 3, 1, -6, 30));
 		this.loadedCharacter.getWeapons().add(
-				new WeaponImpl("Sword", "2d6", "19-20/2", 5, Weapon.DamageType.Slashing, 5));
+				new WeaponImpl("Sword", "2d6", "19-20/2", 5,
+						Weapon.DamageType.Slashing, 5,
+						Weapon.WeaponClass.Simple, Weapon.Type.Melee));
 		this.loadedCharacter.getWeapons().add(
-				new WeaponImpl("Rapier", "1d8", "20/3", 5, Weapon.DamageType.Piercing, 5));
+				new WeaponImpl("Rapier", "1d8", "20/3", 5,
+						Weapon.DamageType.Piercing, 5,
+						Weapon.WeaponClass.Simple, Weapon.Type.Melee));
 		this.loadedCharacter.getWeapons().add(
-				new WeaponImpl("Club", "1d4", "20/1", 5, Weapon.DamageType.Bludgeoning, 5));
+				new WeaponImpl("Club", "1d4", "20/1", 5,
+						Weapon.DamageType.Bludgeoning, 5,
+						Weapon.WeaponClass.Simple, Weapon.Type.Melee));
 		this.loadedCharacter.getWeapons().add(
-				new WeaponImpl("Club", "1d4", "20/1", 5, Weapon.DamageType.Bludgeoning, 5));
+				new WeaponImpl("Bow", "1d4", "20/1", 5,
+						Weapon.DamageType.Bludgeoning, 5,
+						Weapon.WeaponClass.Simple, Weapon.Type.Ranged));
 		this.loadedCharacter.getWeapons().add(
-				new WeaponImpl("Club", "1d4", "20/1", 5, Weapon.DamageType.Bludgeoning, 5));
+				new WeaponImpl("Club", "1d4", "20/1", 5,
+						Weapon.DamageType.Bludgeoning, 5,
+						Weapon.WeaponClass.Simple, Weapon.Type.Melee));
 		this.loadedCharacter.getWeapons().add(
-				new WeaponImpl("Club", "1d4", "20/1", 5, Weapon.DamageType.Bludgeoning, 5));
+				new WeaponImpl("Club", "1d4", "20/1", 5,
+						Weapon.DamageType.Bludgeoning, 5,
+						Weapon.WeaponClass.Simple, Weapon.Type.Melee));
 	}
 
 	/** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-    }
-    
-    public Character getCharacter(){
-    	return this.loadedCharacter;
-    }
-    
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+	}
+
+	public Character getCharacter() {
+		return this.loadedCharacter;
+	}
+
 }

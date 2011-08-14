@@ -31,32 +31,20 @@ public class WeaponAdapter extends ArrayAdapter<Weapon>{
 			View rowView = inflater.inflate(R.layout.weapon_row, null, true);
 			Weapon wp = weapons.get(position);
 			TextView attackBonus = (TextView) rowView.findViewById(R.id.txtAttackBonus);
-			TextView attack = (TextView) rowView.findViewById(R.id.txtAttack);
+			TextView name = (TextView) rowView.findViewById(R.id.txtWeaponName);
 			TextView damage =  (TextView) rowView.findViewById(R.id.txtDamage);
 			TextView critical =  (TextView) rowView.findViewById(R.id.txtCritical);
 			TextView range =  (TextView) rowView.findViewById(R.id.txtRange);
 			TextView type =  (TextView) rowView.findViewById(R.id.txtType);
 			TextView notes =  (TextView) rowView.findViewById(R.id.txtNotes);
 			
-			attackBonus.setText(String.format("%+d", mChar.getBaseAttackBonus()));
-			attack.setText(String.format("%+d", mChar.getAttackBonus(wp)));
+			attackBonus.setText(String.format("%+d", mChar.getAttackBonus(wp)));
+			name.setText(wp.getName());
 			damage.setText(wp.getDamage());
 			critical.setText(wp.getCritical());
 			range.setText(String.format("%d", wp.getRange()));
-			type.setText(String.format("%s", wp.getType()));
+			type.setText(String.format("%s", wp.getDamageType()));
 			notes.setText(wp.getNotes());
-
-			//			ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
-//			textView.setText(names[position]);
-//			// Change the icon for Windows and iPhone
-//			String s = names[position];
-//			if (s.startsWith("Windows7") || s.startsWith("iPhone")
-//					|| s.startsWith("Solaris")) {
-//
-//				imageView.setImageResource(R.drawable.no);
-//			} else {
-//				imageView.setImageResource(R.drawable.ok);
-//			}
 
 			return rowView;
 		}
