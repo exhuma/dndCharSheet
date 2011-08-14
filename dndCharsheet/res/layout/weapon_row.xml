@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TableLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/tableLayout1">
+        <TableRow android:id="@+id/tableRow1" android:layout_height="wrap_content" android:layout_width="match_parent">
+            <TextView android:text="@string/attack" android:id="@+id/textView1" android:layout_height="wrap_content" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:layout_width="match_parent"></TextView>
+            <TextView android:text="@string/attack_bonus" android:id="@+id/textView2" android:layout_height="wrap_content" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:layout_width="match_parent"></TextView>
+            <TextView android:id="@+id/textView3" android:layout_height="wrap_content" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:text="@string/damage" android:layout_width="match_parent"></TextView>
+            <TextView android:layout_height="wrap_content" android:id="@+id/textView4" android:text="@string/critical" android:paddingBottom="2dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:layout_width="match_parent"></TextView>
+        </TableRow>
+        <TableRow android:id="@+id/tableRow1" android:layout_height="wrap_content" android:layout_width="match_parent">
+            <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:id="@+id/txtAttack" android:layout_width="match_parent"></TextView>
+            <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:id="@+id/txtAttackBonus" android:layout_width="match_parent"></TextView>
+            <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:id="@+id/txtDamage" android:layout_width="match_parent"></TextView>
+            <TextView android:text="@string/unknown" android:layout_height="wrap_content" android:paddingLeft="5dp" android:paddingRight="5dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:id="@+id/txtCritical" android:layout_width="match_parent"></TextView>
+        </TableRow>
+    </TableLayout>
+    <TableLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/tableLayout1">
+        <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:paddingBottom="2dp" android:id="@+id/TextView03" android:paddingLeft="5dp" android:layout_height="wrap_content" android:paddingTop="2dp" android:layout_width="wrap_content" android:paddingRight="5dp" android:text="@string/range"></TextView>
+            <TextView android:paddingBottom="2dp" android:id="@+id/TextView02" android:paddingLeft="5dp" android:layout_height="wrap_content" android:paddingTop="2dp" android:layout_width="wrap_content" android:paddingRight="5dp" android:text="@string/type"></TextView>
+            <TextView android:paddingBottom="2dp" android:id="@+id/TextView01" android:paddingLeft="5dp" android:layout_height="wrap_content" android:paddingTop="2dp" android:layout_width="wrap_content" android:paddingRight="5dp" android:text="@string/notes"></TextView>
+        </TableRow>
+        <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:paddingBottom="2dp" android:text="@string/unknown" android:paddingLeft="5dp" android:layout_height="wrap_content" android:paddingTop="2dp" android:layout_width="wrap_content" android:paddingRight="5dp" android:id="@+id/txtRange"></TextView>
+            <TextView android:paddingBottom="2dp" android:text="@string/unknown" android:paddingLeft="5dp" android:layout_height="wrap_content" android:paddingTop="2dp" android:layout_width="wrap_content" android:paddingRight="5dp" android:id="@+id/txtType"></TextView>
+            <TextView android:paddingBottom="2dp" android:text="@string/unknown" android:paddingLeft="5dp" android:layout_height="wrap_content" android:paddingTop="2dp" android:layout_width="wrap_content" android:paddingRight="5dp" android:id="@+id/txtNotes"></TextView>
+        </TableRow>
+    </TableLayout>
+    
+</LinearLayout>

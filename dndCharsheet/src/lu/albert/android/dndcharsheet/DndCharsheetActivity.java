@@ -33,6 +33,12 @@ public class DndCharsheetActivity extends Activity {
 				new WeaponImpl("Rapier", "1d8", "20/3", 5, Weapon.DamageType.Piercing, 5));
 		this.loadedCharacter.getWeapons().add(
 				new WeaponImpl("Club", "1d4", "20/1", 5, Weapon.DamageType.Bludgeoning, 5));
+		this.loadedCharacter.getWeapons().add(
+				new WeaponImpl("Club", "1d4", "20/1", 5, Weapon.DamageType.Bludgeoning, 5));
+		this.loadedCharacter.getWeapons().add(
+				new WeaponImpl("Club", "1d4", "20/1", 5, Weapon.DamageType.Bludgeoning, 5));
+		this.loadedCharacter.getWeapons().add(
+				new WeaponImpl("Club", "1d4", "20/1", 5, Weapon.DamageType.Bludgeoning, 5));
 	}
 
 	/** Called when the activity is first created. */
