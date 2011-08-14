@@ -52,4 +52,19 @@
     <string name="max_dex">Max Dex</string>
     <string name="spell_failure">Spell Failure</string>
     <string name="weight">Weight</string>
+    <string name="classes">Classes</string>
+    <string name="race">Race</string>
+    <string name="level">Level</string>
+    <string name="player">Player</string>
+    <string name="alignment">Alignment</string>
+    <string name="deity">Deity</string>
+    <string name="height">Height</string>
+    <string name="eyes">Eyes</string>
+    <string name="hair">Hair</string>
+    <string name="strength">Strength</string>
+    <string name="dexterity">Dexterity</string>
+    <string name="constitution">Constitution</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="wisdom">Wisdom</string>
+    <string name="charisma">Charisma</string>
 </resources>

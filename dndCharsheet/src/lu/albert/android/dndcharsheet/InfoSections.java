@@ -1,5 +1,6 @@
 package lu.albert.android.dndcharsheet;
 
+import lu.albert.android.dndcharsheet.fragment.CharacterDetails;
 import lu.albert.android.dndcharsheet.fragment.Dashboard;
 import lu.albert.android.dndcharsheet.fragment.Skills;
 import android.app.Fragment;
@@ -76,6 +77,9 @@ public class InfoSections extends ListFragment {
 			Toast.makeText(getActivity(), "Selected section is not yet implemented", 5).show();
 		case IDX_DASHBOARD:
 			showSection(Dashboard.newInstance());
+			break;
+		case IDX_DETAILS:
+			showSection(CharacterDetails.newInstance());
 			break;
 		case IDX_SKILLS:
 			showSection(Skills.newInstance());

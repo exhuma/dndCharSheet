@@ -16,13 +16,11 @@ public class ArmorAdapter extends ArrayAdapter<ProtectiveItem>{
 
 		private final Activity context;
 		private final List<ProtectiveItem> protectiveItems;
-		private Character mChar;
 
 		public ArmorAdapter(Activity context, Character theChar) {
 			super(context, R.layout.armor_row, theChar.getArmor()); 
 			this.context = context;
 			this.protectiveItems = theChar.getArmor();
-			this.mChar = theChar;
 		}
 
 		@Override
